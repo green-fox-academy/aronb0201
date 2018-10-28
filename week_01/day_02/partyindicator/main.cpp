@@ -5,6 +5,8 @@ int main() {
     // Write a program that asks for two numbers
     // The first number represents the number of girls that comes to a party, the
     // second the boys
+
+
     // It should print: The party is excellent!
     // If the the number of girls and boys are equal and 20 or more people are coming to the party
     //
@@ -17,35 +19,32 @@ int main() {
     // It should print: Sausage party
     // If no girls are coming, regardless the count of the people
 
+    int girls ;
+    int boys ;
 
-
-
-    // not working..........
-    int girls;
-    int boys;
-
-    std::cout << " how many girls coming? " << std::endl;
-
+    std::cout << "girls?" << std::endl;
     std::cin >> girls;
 
-    std::cout << " how many boys are coming? " << std::endl;
-
+    std::cout << "boys? " << std::endl;
     std::cin >> boys;
 
-    if ((boys == girls) >= 20 ){
-        std::cout << "the party is excellent" << std::endl;
+    if ((girls + boys >= 20) && girls == boys) {
+        std::cout << "the party is excellent! " << std::endl;
+    }
+    else if ( ( girls + boys >= 20) && girls != boys ) {
+        std::cout << " quite cool party! " << std::endl;
 
     }
-    if (boys != girls) ((boys + girls) >= 20 ) {
-        std::cout << "quite cool party" << std::endl;
+    else if ( (girls + boys) < 20) {
+        std::cout << " average party";
 
     }
-    if ( ( boys + girls) < 20){
-        std::cout << avarage party << std::endl;
+    else if ( girls == 0 ) {
+        std::cout << "sausage party" << std::endl;
+
     }
-    if (girls == 0){
-        std::cout << sausage party << std::endl;
-    }
+
+
 
 
     return 0;
