@@ -31,7 +31,7 @@ int main(int argc, char* args[])
 }
 
 std::string checkNums (const std::vector<int>numbers, const std::vector<int>checker ){
-
+std::string numberAndCheck(numbers);
 if( std::find(numbers.begin(), numbers.end(), checker) !=numbers.end()){
     return checkNums();
 

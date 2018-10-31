@@ -2,9 +2,9 @@
 #include <algorithm>
 #include <vector>
 
- std::string containsSeven(const std::vector<int>& numbers) {
-     for (int i = 0; i<5; ++i){
-         if (i =7){
+ std::string containsSeven(const std::vector<int> numbers) {
+     for (int i = 0; i<numbers[i]; ++i){
+         if (i == 7){
              return "yee";
          }
          else{

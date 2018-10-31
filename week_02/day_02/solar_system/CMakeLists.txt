@@ -1,6 +1,6 @@
 cmake_minimum_required(VERSION 3.12)
-project(todo_print)
+project(solar_system)
 
 set(CMAKE_CXX_STANDARD 14)
 
-add_executable(todo_print main.cpp)
+add_executable(solar_system main.cpp)
