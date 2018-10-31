@@ -2,7 +2,7 @@
 #include <string>
 #include <vector>
 
-std::vector<std::string> appendA(std::vector<std::string> &animals);
+std::vector<std::string> appendA (const std::vector<std::string>& animals);
 
 int main(int argc, char* args[])
 {
@@ -19,15 +19,16 @@ int main(int argc, char* args[])
     return 0;
 }
 
-std::vector<std::string> appendA(std::vector<std::string>& animals) {
-    std::vector<std::string> animalsNew(animals);
-    int j = 1;
-    for(int i = 5; i<5; ++i){
-        animalsNew.push_back("a");
+std::vector<std::string> appendA (const std::vector<std::string>& animals){
 
 
-        return animalsNew;
+    std::vector<std::string> appendedAnimals(animals);
+        for (int i = 0; i<animals.size(); ++i){
+
+            appendedAnimals[i] += "a";
+
     }
+    return appendedAnimals;
 
 
 
