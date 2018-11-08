@@ -22,12 +22,12 @@ int main(int argc, char* args[])
     // Things are a little bit messed up
     // Your job is to decode the notSoCrypticMessage by using the map as a look up table
     // Assemble the fragments into the out variable
-    for(int i = 0; i < 8; ++i){
-        map[i];
+    for ( std::pair<int, std::string> pair : map) {   // definiálás hogy mit akarok pair aztán konkrétan meg is nevezem
+        //std::cout << out << std::endl;
+        std::cout << pair.second << std::endl;  // pair.first a számok, pair.second a sorok
+
     }
 
-
-    std::cout << out << std::endl;
 
     return 0;
 }

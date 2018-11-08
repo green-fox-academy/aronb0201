@@ -1,6 +1,6 @@
 cmake_minimum_required(VERSION 3.12)
-project(he_will_never)
+project(01)
 
 set(CMAKE_CXX_STANDARD 14)
 
-add_executable(he_will_never main.cpp)
+add_executable(01 main.cpp)
