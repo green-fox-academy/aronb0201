@@ -3,4 +3,21 @@ project(counter)
 
 set(CMAKE_CXX_STANDARD 14)
 
-add_executable(counter main.cpp Counter.cpp Counter.h)
+include_directories(.)
+
+add_executable(counter
+        .idea/codeStyles/Project.xml
+        .idea/counter.iml
+        .idea/misc.xml
+        .idea/modules.xml
+        .idea/vcs.xml
+        .idea/workspace.xml
+        cmake-build-debug/cmake_install.cmake
+        cmake-build-debug/CMakeCache.txt
+        cmake-build-debug/counter.cbp
+        cmake-build-debug/counter.exe
+        cmake-build-debug/Makefile
+        CMakeLists.txt
+        Counter.cpp
+        Counter.h
+        main.cpp)

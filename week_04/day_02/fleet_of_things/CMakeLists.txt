@@ -3,4 +3,23 @@ project(fleet_of_things)
 
 set(CMAKE_CXX_STANDARD 14)
 
-add_executable(fleet_of_things main.cpp fleet.cpp fleet.h thing.cpp thing.h)
+include_directories(.)
+
+add_executable(fleet_of_things
+        .idea/codeStyles/Project.xml
+        .idea/fleet_of_things.iml
+        .idea/misc.xml
+        .idea/modules.xml
+        .idea/vcs.xml
+        .idea/workspace.xml
+        cmake-build-debug/cmake_install.cmake
+        cmake-build-debug/CMakeCache.txt
+        cmake-build-debug/fleet_of_things.cbp
+        cmake-build-debug/fleet_of_things.exe
+        cmake-build-debug/Makefile
+        CMakeLists.txt
+        fleet.cpp
+        fleet.h
+        main.cpp
+        thing.cpp
+        thing.h)
