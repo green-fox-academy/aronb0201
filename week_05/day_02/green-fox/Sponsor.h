@@ -14,7 +14,7 @@ public:
 
     Sponsor();
 
-    virtual void introduce();
+    void introduce();
 
     int hire();
 
