@@ -22,7 +22,7 @@ private:
     void play() override;
 
 protected:
-    int _numberOfStrings = 0;
+    int _numberOfStrings ;
 };
 
 
