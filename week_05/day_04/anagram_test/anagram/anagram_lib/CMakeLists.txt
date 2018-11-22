@@ -1,0 +1,1 @@
+add_library(anagram_lib anagram.h anagram.cpp)
