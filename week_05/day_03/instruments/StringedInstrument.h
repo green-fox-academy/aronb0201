@@ -1,29 +1,29 @@
 //
-// Created by Titkos on 21/11/2018.
+// Created by Titkos on 27/11/2018.
 //
 
-#ifndef INSTRUMENTS_STRINGEDINSTRUMENT_H
-#define INSTRUMENTS_STRINGEDINSTRUMENT_H
+#ifndef INC_01_STRINGEDINSTRUMENT_H
+#define INC_01_STRINGEDINSTRUMENT_H
 
 
 #include "Instrument.h"
 
 class StringedInstrument : public Instrument {
-
 public:
-
     StringedInstrument();
-
-    virtual void sound() = 0;
 
     StringedInstrument(int _numberOfStrings);
 
-private:
-    void play() override;
+
+    virtual void sound()=0;
+
+    virtual void  play() override;
+
 
 protected:
-    int _numberOfStrings ;
+    int _numberOfStrings;
+
 };
 
 
-#endif //INSTRUMENTS_STRINGEDINSTRUMENT_H
+#endif //INC_01_STRINGEDINSTRUMENT_H

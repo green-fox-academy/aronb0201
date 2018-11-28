@@ -1,24 +1,23 @@
 //
-// Created by Titkos on 21/11/2018.
+// Created by Titkos on 27/11/2018.
 //
 
 #include <iostream>
 #include "BassGuitar.h"
-#include "StringedInstrument.h"
-#include "Instrument.h"
 
-BassGuitar::BassGuitar() : StringedInstrument(_numberOfStrings) {
+BassGuitar::BassGuitar() :  StringedInstrument() {
     _numberOfStrings = 4;
+
 }
 
-BassGuitar::BassGuitar(int numberOfStrings) : StringedInstrument(_numberOfStrings) {
+BassGuitar::BassGuitar(int numberOfStrings) : StringedInstrument(numberOfStrings){
     _numberOfStrings = numberOfStrings;
-}
-
-void BassGuitar::play() {
-    std::cout << _numberOfStrings << " " << "Duum-duum-duum" << std::endl;
 }
 
 void BassGuitar::sound() {
 
+}
+
+void BassGuitar::play() {
+    std::cout << _numberOfStrings << " " << "dum-dumm-dumm" << std::endl;
 }

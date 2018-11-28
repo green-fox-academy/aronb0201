@@ -15,11 +15,13 @@ Aircrafts::Aircrafts() {
 
 }
 
-Aircrafts::Aircrafts(int maxAmmo, int baseDamage, int baseAmmo, Type type) {
+Aircrafts::Aircrafts(int maxAmmo, int baseDamage, int baseAmmo, Type type, int priorityNumber) {
     _maxAmmo = maxAmmo;
     _baseDamage = baseDamage;
     _baseAmmo = baseAmmo;
     _type = type;
+    _priorityNumber = priorityNumber;
+
 }
 
 int Aircrafts::fight() {
@@ -56,13 +58,8 @@ void Aircrafts::getStatus() {
 
 }
 
-bool Aircrafts::isPriority() {
-    if( _type == Type::F35){
-        return true;
-    }
-    else{
-        return false;
-    }
+int Aircrafts::isPriority() {
+
 }
 
 int Aircrafts::getBaseAmmo() {

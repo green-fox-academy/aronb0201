@@ -18,13 +18,13 @@ class Aircrafts {
 
 public:
     Aircrafts();
-    Aircrafts(int maxAmmo, int baseDamage, int baseAmmo, Type type);
+    Aircrafts(int maxAmmo, int baseDamage, int baseAmmo, Type type, int priorityNumber);
     void getAmmo();
     int fight();
     int refill();
     std::string getType();
     void getStatus();
-    bool isPriority();
+    virtual int isPriority()=0 ;
     int getBaseAmmo();
     int getMaxAmmo();
     int getDamage();
@@ -38,6 +38,7 @@ protected:
     int _baseDamage;
     int _baseAmmo;
     Type _type;
+    int _priorityNumber;
 
 };
 

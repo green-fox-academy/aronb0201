@@ -13,6 +13,7 @@ class F16 : public Aircrafts {
 public:
     F16();
     F16(int maxAmmo, int baseDamage,int baseAmmo);
+    int isPriority() override;
 
 
 

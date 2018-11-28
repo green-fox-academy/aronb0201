@@ -22,11 +22,12 @@ public:
     void storedAircraftsStatus();
     void fight(Carrier * carrier);
     int getHP();
-
+    virtual int isPriority();
 protected:
     std::vector<Aircrafts *> _aircrafts;
     int _ammoStoredInCarrier;
     int _healthPoint;
+    int _priorityNumber;
 
 
 };

@@ -11,6 +11,12 @@ F16::F16() : Aircrafts()  {
     _baseDamage = 30;
     _baseAmmo = 0;
     _type = Type::F16;
+    isPriority();
+}
+
+int F16::isPriority() {
+
+    return _priorityNumber = 2;
 
 }
 

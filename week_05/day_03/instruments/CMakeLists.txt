@@ -1,20 +1,6 @@
 cmake_minimum_required(VERSION 3.12)
-project(instruments)
+project(01)
 
 set(CMAKE_CXX_STANDARD 14)
 
-include_directories(.)
-include_directories(cmake-build-debug)
-
-add_executable(instruments
-        cmake-build-debug/ElectricGuitar.cpp
-        cmake-build-debug/ElectricGuitar.h
-        cmake-build-debug/Violin.cpp
-        cmake-build-debug/Violin.h
-        BassGuitar.cpp
-        BassGuitar.h
-        Instrument.cpp
-        Instrument.h
-        main.cpp
-        StringedInstrument.cpp
-        StringedInstrument.h)
+add_executable(01 main.cpp Instrument.cpp Instrument.h StringedInstrument.cpp StringedInstrument.h ElectricGuitar.cpp ElectricGuitar.h BassGuitar.cpp BassGuitar.h Violin.cpp Violin.h)

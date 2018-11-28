@@ -6,6 +6,6 @@
 
 TEST(test_anagram, test_is_anagram){
     std::string s1 = "valami";
-    std::string s2 = "akarmi";
+    std::string s2 = "valami";
     ASSERT_EQ(is_anagram( s1, s2), true);
 }

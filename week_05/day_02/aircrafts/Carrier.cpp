@@ -21,18 +21,25 @@ void Carrier::addToStore(Aircrafts *aircrafts) {
 void Carrier::fill() {
     if (_ammoStoredInCarrier != 0) {
         for (int i = 0; i < _aircrafts.size(); ++i) {
-            if(_ammoStoredInCarrier>_aircrafts[i]->getMaxAmmo()) {
-                _ammoStoredInCarrier -= _aircrafts[i]->getMaxAmmo() - _aircrafts[i]->getBaseAmmo();
-                _aircrafts[i]->setBaseAmmo(_aircrafts[i]->getMaxAmmo());
-            }
-            else{
-                std::cout << "dont have ammo" << std::endl;
-            }
-            /*while (_aircrafts[i]->getBaseAmmo() != _aircrafts[i]->getMaxAmmo()) {
-                _ammoStoredInCarrier--;
-                _aircrafts[i]->refill();
+            if (_aircrafts[i]->isPriority() == 1) {
+                if (_ammoStoredInCarrier > _aircrafts[i]->getMaxAmmo()) {
+                    _ammoStoredInCarrier -= _aircrafts[i]->getMaxAmmo() - _aircrafts[i]->getBaseAmmo();
+                    _aircrafts[i]->setBaseAmmo(_aircrafts[i]->getMaxAmmo());
+                    _priorityNumber++;
 
-            }*/
+                } else {
+                    std::cout << "dont have ammo" << std::endl;
+                }
+
+            } else if (_aircrafts[i]->isPriority() == 2) {
+                if (_ammoStoredInCarrier > _aircrafts[i]->getMaxAmmo()) {
+                    _ammoStoredInCarrier -= _aircrafts[i]->getMaxAmmo() - _aircrafts[i]->getBaseAmmo();
+                    _aircrafts[i]->setBaseAmmo(_aircrafts[i]->getMaxAmmo());
+                } else {
+                    std::cout << "dont have ammo" << std::endl;
+                }
+            }
+
 
         }
 
@@ -82,12 +89,21 @@ void Carrier::storedAircraftsStatus() {
 }
 
 void Carrier::fight(Carrier *carrier) {
-     _healthPoint-=carrier->storedAircraftsDamage();
-     carrier->_healthPoint-=storedAircraftsDamage();
+    _healthPoint -= carrier->storedAircraftsDamage();
+    carrier->_healthPoint -= storedAircraftsDamage();
+    for (int i = 0; i < _aircrafts.size(); ++i) {
+        _aircrafts[i]->setBaseAmmo(0);
+
+    }
 }
 
 int Carrier::getHP() {
     return _healthPoint;
+}
+
+int Carrier::isPriority() {
+    int priorityNumber;
+    return priorityNumber;
 }
 
 

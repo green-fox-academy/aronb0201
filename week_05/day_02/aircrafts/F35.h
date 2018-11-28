@@ -13,6 +13,8 @@ public:
     F35();
     F35(int maxAmmo, int baseDamage, int baseAmmo);
 
+    int isPriority() override;
+
 protected:
 
 

@@ -1,24 +1,25 @@
 //
-// Created by Titkos on 21/11/2018.
+// Created by Titkos on 27/11/2018.
 //
 
-#ifndef INSTRUMENTS_INSTRUMENT_H
-#define INSTRUMENTS_INSTRUMENT_H
+#ifndef INC_01_INSTRUMENT_H
+#define INC_01_INSTRUMENT_H
 
 
-#include <string>
 
 class Instrument {
+
 public:
     Instrument();
+    Instrument(int numberOfStrings);
 
-    Instrument(std::string name);
 
-    virtual void play() = 0;
+    virtual void play() =0;
 
 protected:
-    std::string _name;
+
+
 };
 
 
-#endif //INSTRUMENTS_INSTRUMENT_H
+#endif //INC_01_INSTRUMENT_H
