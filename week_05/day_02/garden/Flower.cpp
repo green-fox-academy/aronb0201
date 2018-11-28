@@ -20,7 +20,7 @@ void Flower::plantState() {
     if (getWaterLevel() < getWaterNeed()) {
         std::cout << " The flover colored " << getColor() << " needs water" << std::endl;
     } else if (getWaterLevel() >= getWaterNeed()) {
-        std::cout << " the flower colored" << getColor() << " dont need more water" << std::endl;
+        std::cout << " the flower colored " << getColor() << " dont need more water" << std::endl;
     }
 }
 

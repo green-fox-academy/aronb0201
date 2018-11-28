@@ -22,7 +22,7 @@ void Tree::plantState() {
         std::cout << " The tree colored " << getColor() << " needs water" << std::endl;
     }
     else if (getWaterLevel()>=getWaterNeed()){
-        std::cout << " the tree colored" << getColor() << " dont need more water" << std::endl;
+        std::cout << " the tree colored " << getColor() << " dont need more water" << std::endl;
     }
 }
 

@@ -16,7 +16,7 @@ int main() {
     plants1.addToGarden(&tree1);
     plants1.addToGarden(&tree2);
 
-    plants1.irrigate(40);
+    plants1.irrigate(70);
 
     return 0;
 }
