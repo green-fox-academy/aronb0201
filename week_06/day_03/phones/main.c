@@ -7,14 +7,13 @@
 char *get_oldest_phone(phones_t *phone_array, char *oldest);
 
 int get_screen_size_count(phones_t *array, enum screen_size size);
-int age_diff (phones_t smartphone);
+
+int age_diff(phones_t smartphone);
+
 int main() {
 
     struct phones smartphones[255];
-
     int base_price = 300;
-
-    int age_differ = (2018-smartphones->release_date)*50;
     char buffer[255];
     char *akarmi;
     int counter = 0;
@@ -48,15 +47,15 @@ int main() {
 
         if (smartphones[i].screen_size == BIG) {
             fputs("  ", price_calc);
-            fprintf(price_calc, "%d", ((base_price+300)+age_diff(smartphones[i])));
+            fprintf(price_calc, "%d", ((base_price + 300) + age_diff(smartphones[i])));
         } else if (smartphones[i].screen_size == MEDIUM) {
             fputs("  ", price_calc);
-            fprintf(price_calc, "%d", ((base_price+100)+age_diff(smartphones[i])));
+            fprintf(price_calc, "%d", ((base_price + 100) + age_diff(smartphones[i])));
         } else {
             fputs("  ", price_calc);
-            fprintf(price_calc, "%d", ((base_price)+age_diff(smartphones[i])));
+            fprintf(price_calc, "%d", ((base_price) + age_diff(smartphones[i])));
         }
-        fputs("\n",price_calc);
+        fputs("\n", price_calc);
 
     }
 
@@ -103,12 +102,11 @@ int get_screen_size_count(phones_t *array, enum screen_size size) {
     return counter;
 }
 
-int age_diff (phones_t smartphone){
-    int price =(2018-smartphone.release_date)*50;
-    if(price>250){
+int age_diff(phones_t smartphone) {
+    int price = (2018 - smartphone.release_date) * 50;
+    if (price > 250) {
         return 250;
-    }
-    else{
+    } else {
         return price;
     }
 
