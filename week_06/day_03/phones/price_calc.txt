@@ -1,0 +1,17 @@
+
+  550
+Huawei_P10  450
+Iphone_8  450
+Samsung_Galaxy_Ace  550
+Samsung_Galaxy_Note_9  600
+Motorola_Moto_Z4  450
+Xiaomi_Mi_8  600
+OnePlus_One  600
+Nokia_Lumia_630  500
+Asus_Zenfone_5  600
+Sony_Xperia_T  550
+Acer_Liquid_Z4  550
+HTC_Desire_830  500
+Verykool_T7445  650
+Google_Pixel  500
+LG_K3  500
